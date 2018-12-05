@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Alpin Mountain</title>
+    <!-- Nos liens de style -->
+    <link rel="stylesheet" href="./CSS/configurator.css" />
+    <link rel="stylesheet" href="./CSS/app.css">
+    <!-- Boostrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bodyPosition">
+    <!-- la nav bar -->
+    <nav
+      class=" postionAbsolute navbar-Start navbar navbar-expand-lg  sticky-nav-Start"
+      style="padding-top:1px;"
+    >
+      <a class="navbar-brand" href="#">
+        <img
+          src="./AlpineCars_app-images/sources-homepage/logo/logo-white.png"
+          alt="logo"
+          id="logoAlpine"
+        />
+      </a>
+      <button
+        class=" buttonHamburger navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon fa fa-bars fa-2x "></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#versions"
+              >VERSIONS<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#couleurs">COULEURS</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#jantes">JANTES</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#selleries">SELLERIES</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#equipements">EQUIPEMENTS</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#accessoires">ACCESSOIRES</a>
+          </li>
+          <li class="nav-item bold">
+            <a class="nav-link" href="./index.html">Accueil</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <aside class="filAriaStart offset-11">
+      <ul style="position:absolute; margin-top: 20px">
+        <li class="custom-icon">
+          <a style="line-height: 0px !important;
+          padding: 1rem !important; margin-left:-2px;" href="#versions">1</a></li>
+          <li class="custom-icon "> 
+            <a href="#couleurs">2</a></li>
+          <li class="custom-icon "><a style="padding: 1rem; line-height: 0px" href="#jantes">3</a></li>
+          <li class="custom-icon "><a style="padding: 1rem; line-height: 0px" href="#selleries">4</a></li>
+          <li class="custom-icon"><a style="padding: 1rem; line-height: 0px" href="#equipements">5</a></li>
+          <li class="custom-icon "><a style="padding: 1rem; line-height: 0px" href="#accessoires">6</a></li>
+          <li  class="custom-icon "><a style="padding: 1rem; line-height: 0px" href="recapitulatif">7</a></li>
+      </ul>
+
+    </aside>
+    <!-- LA div app qui englope toutes les section -->
+    <div id="app">
+      <!-- PREMIERE SECTION CHOIX DE VERSION -->
+      <section id="versions" class=" container-fluid ">
+        <!-- Titre -->
+        <div class=" contenair marginTitle">
+          <div class="row">
+            <div class=" BigTitle col-6 ml-5"><h4>Choix de version</h4></div>
+            <div class="col-1 BigTitleHelp mr-5"></div>
+          </div>
+          <div class=" contenair">
+            <div class="row BigTitleSmarphone">
+              <div class="col-12 col-sm-12">
+                <h4 class="smarphoneTitle">Choix de version</h4>
+              </div>
+            </div>
+          </div>
+          <!-- les deux images avec les deux bouttons -->
+          <div class="contenair-fluid">
+            <div class="row">
+              <!-- les deux images -->
+              <div
+                class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 contenairCenter"
+              >
+                <img
+                  src="./AlpineCars_app-images/configurateur/modele/selection/pure.png"
+                  alt="version Pure"
+                  class="imageRelatif"
+                  :class="pure? 'validPicture': 'noValidPicture' "
+                />
+                <!-- validation symbol-->
+                <i class=" imgvalid fa fa-check-circle fa-3x"  v-if="pure" aria-hidden="true"></i>
+                <p>54 700€</p>
+              </div>
+              <div
+                class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 contenairCenter"
+              >
+                <img
+                  src="./AlpineCars_app-images/configurateur/modele/selection/legende.png"
+                  alt="version Pure"
+                  class="imageRelatif"
+                  :class="legende? 'validPicture': 'noValidPicture' "
+                 
+                />
+                  <!-- validation symbol-->
+                  <i class=" imgvalid fa fa-check-circle fa-3x" v-show="legende" aria-hidden="true"></i>
+
+                <p>58 500€ <span class="imgvalid"></span> </p>
+              </div>
+              <!-- les deux bouttons -->
+              <div
+                class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 ButtonContenair"
+              >
+                <div class="row conternaireLargeSection1">
+                  <div
+                    class="col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 buttonMarginSection1Legend"
+                  >
+                    <button v-on:click="buttonVersionPure" :class="pure? 'valid': 'noValid' "  class="buttonClass rounded">PURE</button>
+                  </div>
+                  <div class="col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <button v-on:click="buttonVersionLegende" :class="legende? 'valid': 'noValid' " class="buttonClass rounded">LEGENDE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Bouton avec le prix  -->
+        <div class=" contenair contenairShop2">
+          <div class="row flex-wrapLG">
+            <button
+              class="BouttonSecondPrixCacher rounded col-6 col-sm-6 col-md-6 col-lg-8 col-xd-8"
+            >
+              Cette élément est en display none
+            </button>
+            <button
+              class="buttonShop2 rounded col-6 col-sm-6 col-md-6 col-lg-4 col-xd-4"
+            >
+              {{priceTotalDisplay}} € <i class="fa fa-shopping-cart"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="couleurs">
+        <!-- le Titre -->
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xd-12 contenairCenter">
+              <button class="BouttonSecondTitle rounded ">Couleur</button>
+            </div>
+          </div>
+        </div>
+        <!-- Le carousel couleur Bleu -->
+        <div id="carouselColorBlue" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselColorBlue"
+              data-slide-to="0"
+              class="active"></li>
+            <li data-target="#carouselColorBlue" data-slide-to="1"></li>
+            <li data-target="#carouselColorBlue" data-slide-to="2"></li>
+            <li data-target="#carouselColorBlue" data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner">
+            <!-- PREMIER SLIDE COULEUR -->
+            <div class="carousel-item active">
+              <div class="contenairCenter">
+                <img
+                  class="d-block relative carouselCouleur img-fluid-Design"
+                  :src="pictureCarouselColor[0]"
+                  alt="first slide"
+                  style="max-width: 100%;"/>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <!-- DEUXIEME SLIDE COULEUR -->
+              <div class="contenairCenter">
+                <img
+                  class="d-block carouselCouleur img-fluid-Design"
+                  :src="pictureCarouselColor[1]"
+                  alt="second slide"
+                  style="max-width: 100%;"/>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="contenairCenter">
+                <!-- TROISIEME SLIDE COULEUR -->
+                <img
+                  class="d-block carouselCouleur img-fluid-Design"
+                  :src="pictureCarouselColor[2]"
+                  alt="third slide"
+                  style="max-width: 100%;"
+                  />
+              </div>
+            </div>
+            <div class="carousel-item ">
+              <div class="contenairCenter">
+                <!-- QUATRIEME SLIDE COUELUR -->
+                <img
+                  class="d-block carouselCouleur img-fluid-Design"
+                  :src="pictureCarouselColor[3]"
+                  alt="four slide"
+                  style="max-width: 100%;"/>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselColorBlue"
+            role="button"
+            data-slide="prev">
+            <span
+              class="carousel-control-prev-icon background-color: black"
+              aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselColorBlue"
+            role="button"
+            data-slide="next">
+            <span
+              class="carousel-control-next-icon background-color: black"
+              aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <div>
+          <!-- Le choix des couleurs -->
+          <div class="contenairColor contenair">
+            <div class=" SmallContenairColor">
+              <img
+                class="d-block smallPicture imageRelatif "
+                src="./AlpineCars_app-images/configurateur/couleurs/selection/bleu.jpg"
+                alt="third slide"
+                style="max-width: 100%;"
+                @click="choiceColorBlue"/>
+                 <!-- validation symbol-->
+               <i class=" colorvalid fa fa-check-circle fa-3x" v-show="blue" aria-hidden="true"></i>
+              <p style="text-align: center;">Bleu Alpine <br />1 800€</p>
+            </div>
+            <div class=" SmallContenairColor">
+              <img
+                class="d-block smallPicture imageRelatif "
+                src="./AlpineCars_app-images/configurateur/couleurs/selection/blanc.jpg"
+                alt="third slide"
+                style="max-width: 100%;"
+                @click="choiceColorWhite"/>
+                 <!-- validation symbol-->
+               <i class=" colorvalid fa fa-check-circle fa-3x" v-show="white" aria-hidden="true"></i>
+              <p style="text-align: center;">Blanc Glacé <br />0€</p>
+            </div>
+            <div class=" SmallContenairColor">
+              <img
+                class="d-block smallPicture imageRelatif "
+                src="./AlpineCars_app-images/configurateur/couleurs/selection/noir.jpg"
+                alt="third slide"
+                style="max-width: 100%;"
+                @click="choiceColorBlack"/>
+                 <!-- validation symbol-->
+               <i class=" colorvalid fa fa-check-circle fa-3x" v-show="black" aria-hidden="true"></i>
+              <p style="text-align: center;">Noir Profond <br />840€</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bouton avec le prix -->
+        <div class=" contenair contenairShop2">
+          <div class="row flex-wrapLG">
+            <button
+              class="BouttonSecondPrix rounded col-12 col-sm-12 col-md-12 col-lg-8 col-xd-8">
+              <!-- TO DO : message à afficher par défaut à l'aide du blade de Laravel-->
+              Choix de la couleur {{priceColor}}€
+            </button>
+            <button
+              class="buttonShop2 rounded col-6 col-sm-6 col-md-6 col-lg-4 col-xd-4">
+              {{priceTotalDisplay}} € <i class="fa fa-shopping-cart"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+      <!-- CHOIX DES JANTES -->
+      <section id="jantes">
+        <!-- Titre -->
+        <div class="container marginTitle">
+          <div class="row">
+            <div
+              class="col-12 col-sm-12 col-md-12 col-lg-12 col-xd-12 contenairCenter">
+              <button class="BouttonSecondTitle rounded ">CHOIX JANTES</button>
+            </div>
+          </div>
+        </div>
+        <!--
+          image en grand de jante en fonction de la couleur choisi et du clic
+        -->
+        <div class="contenair contenairCenter ">
+          <img
+            class="d-block BigpictureRims"
+            :src="seeRimsPicture[9]"
+            alt="third slide"
+            style="max-width: 100%;
+                  margin-left:-60px;"/>
+        </div>
+        <div class="marginTop">
+          <!-- Le choix des jantes -->
+          <div class="contenairColor contenair">
+            <div class=" SmallContenairColor">
+              <img
+                class="d-block smallPicture  "
+                src="./AlpineCars_app-images/configurateur/jantes/selection/jante-standard.jpg"
+                alt="third slide"
+                style="max-width: 100%;"
+                @click="choiceRimsStandard"
+                />
+                 <!-- validation symbol-->
+               <i class=" colorvalid fa fa-check-circle fa-3x" v-show="standartRims" aria-hidden="true"></i>
+              
+              <p style="text-align: center;">Standard <br />0€</p>
+            </div>
+            <div class=" SmallContenairColor">
+              <img
+                class="d-block smallPicture imageRelatif"
+                src="./AlpineCars_app-images/configurateur/jantes/selection/jante-serac.jpg"
+                alt="third slide"
+                style="max-width: 100%;"
+                @click="choiceRimsSerac"
+                />
+                 <!-- validation symbol-->
+               <i class=" colorvalid fa fa-check-circle fa-3x" v-show="seracRims" aria-hidden="true"></i>
+              <p style="text-align: center;">Serac <br />1 000€</p>
+
+            </div>
+            <div class=" SmallContenairColor">
+              <img
+                class="d-block smallPicture "
+                src="./AlpineCars_app-images/configurateur/jantes/selection/jante-legende.jpg"
+                alt="third slide"
+                style="max-width: 100%;"
+                @click="choiceRimsLegende"/>
+
+                  <!-- validation symbol-->
+               <i class=" colorvalid fa fa-check-circle fa-3x" v-show="legendeRims" aria-hidden="true"></i>
+              <p class="text-align: center;">Légende<br />0€ Modèle Légende</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bouton avec le prix -->
+        <div class=" contenair contenairShop2">
+          <div class="row flex-wrapLG">
+            <button
+              class="BouttonSecondPrix rounded col-6 col-sm-6 col-md-6 col-lg-8 col-xd-8">
+              {{message}} {{priceRims}}€
+            </button>
+            <button
+              class="buttonShop2 rounded col-6 col-sm-6 col-md-6 col-lg-4 col-xd-4">
+              {{priceTotalDisplay}} € <i class="fa fa-shopping-cart"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <!-- CHOIX Sellerie -->
+      <section id="selleries">
+        <!-- Titre -->
+        <div class="container marginTitle">
+          <div class="row">
+            <div
+              class="col-12 col-sm-12 col-md-12 col-lg-12 col-xd-12 contenairCenter">
+              <button class="BouttonSecondTitle rounded ">CHOIX SELLERIE</button>
+            </div>
+          </div>
+        </div>
+        <div class="marginTop">
+          <!-- Le choix des sièges -->
+          <div class="contenair contenairCenter">
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xd-6 marginSeat">
+                <img
+                  class="d-block pictureSeat"
+                  src="./AlpineCars_app-images/configurateur/interieurs/selection/cuir-brun.jpg"
+                  alt="third slide"
+                  style="max-width: 100%;"/>
+                <p style="text-align: center;">Cuir Noir et Diamica <br />0€</p>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xd-6 marginSeat">
+                <img
+                  class="d-block pictureSeat"
+                  src="./AlpineCars_app-images/configurateur/interieurs/selection/cuir-noir.jpg"
+                  alt="third slide"
+                  style="max-width: 100%;"/>
+                <p style="text-align: center;">Cuir Noir Perforé<br />800€</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xd-6 marginSeat">
+                <img
+                  class="d-block pictureSeat "
+                  src="./AlpineCars_app-images/configurateur/interieurs/selection/cuir-noir_dinamica.jpg"
+                  alt="third slide"
+                  style="max-width: 100%;"/>
+                <p style="text-align: center;">
+                  Cuir Noir <br />0€ Modèle Légende
+                </p>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xd-6">
+                <img
+                  class="d-block pictureSeat "
+                  src="./AlpineCars_app-images/configurateur/interieurs/selection/cuir-noir_perfore.jpg"
+                  alt="third slide"
+                  style="max-width: 100%;"
+                />
+                <p style="text-align: center;">
+                  Cuir Brun <br />800€ Modèle Légende
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Bouton avec le prix -->
+        <div class=" contenair contenairShop2">
+          <div class="row flex-wrapLG">
+            <button
+              class="BouttonSecondPrix rounded col-12 col-sm-12 col-md-12 col-lg-8 col-xd-8">
+              Cuir Noir Perforé 800€
+            </button>
+            <button
+              class="buttonShop2 rounded col-6 col-sm-6 col-md-6 col-lg-4 col-xd-4">
+              54 700 € <i class="fa fa-shopping-cart"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- CHOIX Equipements -->
+      <section id="equipements" class="paddingSection marginTitle">
+        <!-- Titre -->
+        <div class="container marginTitle">
+          <div class="row">
+            <div
+              class="col-12 col-sm-12 col-md-12 col-lg-12 col-xd-12 contenairCenter"
+            >
+              <button class="BouttonSecondTitle rounded ">
+                CHOIX EQUIPEMENTS
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Le choix des équipements -->
+        <div class="contenair contenairCenter contenairEquipment">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xd-6">
+              <img
+                class="d-block pictureSeat"
+                src="./AlpineCars_app-images/configurateur/equipements/selection/conduite.jpg"
+                alt="third slide"
+                style="max-width: 100%;"/>
+              <p style="text-align: center;">CONDUITE</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xd-6">
+              <img
+                class="d-block pictureSeat"
+                src="./AlpineCars_app-images/configurateur/equipements/selection/confort.jpg"
+                alt="third slide"
+                style="max-width: 100%;"/>
+              <p style="text-align: center;">CONFORT</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xd-6">
+              <img
+                class="d-block pictureSeat "
+                src="./AlpineCars_app-images/configurateur/equipements/selection/design.jpg"
+                alt="third slide"
+                style="max-width: 100%;"/>
+              <p style="text-align: center;">DESIGN</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xd-6">
+              <img
+                class="d-block pictureSeat "
+                src="./AlpineCars_app-images/configurateur/equipements/selection/media-nav.jpg"
+                alt="third slide"
+                style="max-width: 100%;"/>
+              <p style="text-align: center;">MEDIA ET NAVIGATION</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xd-6">
+              <img
+                class="d-block pictureSeat "
+                src="./AlpineCars_app-images/configurateur/equipements/selection/perso-ext.jpg"
+                alt="third slide"
+                style="max-width: 100%;"
+              />
+              <p style="text-align: center;">PERSO EXTERIEURE</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xd-6">
+              <img
+                class="d-block pictureSeat "
+                src="./AlpineCars_app-images/configurateur/equipements/selection/perso-int.jpg"
+                alt="third slide"
+                style="max-width: 100%;"
+              />
+              <p style="text-align: center;">PERSO INTERIEURE</p>
+            </div>
+          </div>
+
+          <img
+            class="d-block pictureSeat "
+            src="./AlpineCars_app-images/configurateur/equipements/selection/securite.jpg"
+            alt="third slide"
+            style="max-width: 100%;"
+          />
+          <p style="text-align: center;">SECURITE</p>
+        </div>
+      </section>
+
+      <hr />
+      <!--
+        TO DO : FAIRE APPARAITRE LA BONNE SECTION SELON LE CHOIX DE l'utilisateur
+      -->
+      <!-- CHOIX DESIGN -->
+      <section id="equipementDesign" class="">
+        <!-- Titre -->
+        <div class="container marginTitle">
+          <div class="row">
+            <div
+              class="col-12 col-sm-12 col-md-12 col-lg-12 col-xd-12 contenairCenter"
+            >
+              <button class="BouttonSecondTitle rounded ">
+                EQUIPEMENTS DESIGN
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Le choix des équipements 2 EQUIPEMENTS -->
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-12 col-sm-12 col-md-8 col-lg-10 col-xd-10 containerDesign"
+            >
+              <div class="row">
+                <!-- les 2 images du DESIGN -->
+                <div class="col-6 col-sm-6 col-md-12 col-lg-12 col-xd-12">
+                  <img
+                    class="d-block PictureDesign"
+                    src="./AlpineCars_app-images/configurateur/equipements/categories/design/repose-pied-alu.jpg"
+                    alt="third slide"
+                    style="max-width: 100%;"
+                  />
+                  <p class="bold text-center text-uppercase">REPOSE PIEDS</p>
+                </div>
+                <div class="col-6 col-sm-6 col-md-12 col-lg-12 col-xd-12">
+                  <img
+                    class="d-block PictureDesign "
+                    src="./AlpineCars_app-images/configurateur/equipements/categories/design/pack-heritage.jpg"
+                    alt="third slide"
+                    style="max-width: 100%;"
+                  />
+                  <p class="bold text-center text-uppercase">PACK HERITAGE</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-6 col-sm-6 col-md-4 col-lg-2 col-xd-2 ContenaircategoryEquipment"
+            >
+              <!-- Les 6 autres images des sections -->
+              <div class="row">
+                <div
+                  class=" SmallContenairColor col-4 col-sm-4 col-md-12 col-lg-12 col-xd-12"
+                >
+                  <img
+                    class="d-block smallPictureCategory"
+                    src="./AlpineCars_app-images/configurateur/equipements/selection/conduite.jpg"
+                    alt="third slide"
+                    style="max-width: 100%;"
+                  />
+                  <p style="text-align: center;" class="bold">CONDUITE</p>
+                </div>
+                <div
+                  class=" SmallContenairColor col-4 col-sm-4 col-md-12 col-lg-12 col-xd-12"
+                >
+                  <img
+                    class="d-block smallPictureCategory "
+                    src="./AlpineCars_app-images/configurateur/equipements/selection/confort.jpg"
+                    alt="third slide"
+                    style="max-width: 100%;"
+                  />
+                  <p style="text-align: center;" class="bold">CONFORT</p>
+                </div>
+                <div
+                  class=" SmallContenairColor col-4 col-sm-4 col-md-12 col-lg-12 col-xd-12"
+                >
+                  <img
+                    class="d-block smallPictureCategory  "
+                    src="./AlpineCars_app-images/configurateur/equipements/selection/media-nav.jpg"
+                    alt="third slide"
+                    style="max-width: 100%;"
+                  />
+                  <p style="text-align: center;" class="bold">
+                    MEDIA ET NAVIGATION
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class=" SmallContenairColor col-4 col-sm-4 col-md-12 col-lg-12 col-xd-12"
+                >
+                  <img
+                    class="d-block smallPictureCategory"
+                    src="./AlpineCars_app-images/configurateur/equipements/selection/perso-ext.jpg"
+                    alt="third slide"
+                    style="max-width: 100%;"
+                  />
+                  <p style="text-align: center;" class="bold">PERSO EXTERIEURE</p>
+                </div>
+                <div
+                  class=" SmallContenairColor col-4 col-sm-4 col-md-12 col-lg-12 col-xd-12"
+                >
+                  <img
+                    class="d-block smallPictureCategory "
+                    src="./AlpineCars_app-images/configurateur/equipements/selection/perso-int.jpg"
+                    alt="third slide"
+                    style="max-width: 100%;"
+                  />
+                  <p style="text-align: center;" class="bold">PERSO INTERIEURE</p>
+                </div>
+                <div
+                  class=" SmallContenairColor col-4 col-sm-4 col-md-12 col-lg-12 col-xd-12"
+                >
+                  <img
+                    class="d-block smallPictureCategory  "
+                    src="./AlpineCars_app-images/configurateur/equipements/selection/securite.jpg"
+                    alt="third slide"
+                    style="max-width: 100%;"
+                  />
+                  <p style="text-align: center;" class="bold">SECURITE</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Bouton avec le prix -->
+        <div class=" contenair contenairShop2">
+          <div class="row flex-wrapLG">
+            <button
+              class="BouttonSecondPrix rounded col-12 col-sm-12 col-md-12 col-lg-8 col-xd-8"
+            >
+              REPOSE PIEDS + PACK HERITAGE
+            </button>
+            <button
+              class="buttonShop2 rounded col-6 col-sm-6 col-md-6 col-lg-4 col-xd-4"
+            >
+              54 700 € <i class="fa fa-shopping-cart"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <!-- CHOIX ACCESSOIRES -->
+      <section id="accessoires" class="paddingSection marginTitle">
+        <!-- Titre -->
+        <div class="container marginTitle">
+          <div class="row">
+            <div
+              class="col-12 col-sm-12 col-md-12 col-lg-12 col-xd-12 contenairCenter"
+            >
+              <button class="BouttonSecondTitle rounded ">
+                CHOIX ACCESSOIRES
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- l'ARCORDEONS DES ACCESOIRE -->
+        <div id="accordion" class="marginTitle">
+          <div class="card">
+            <div class="card-header contenairButtonAccessory" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link buttonAccessory " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color:white !important; font-weight: bold;">
+                  TRANSPORT ET PROTECTION
+                </button>
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <!-- ON MET LES IMAGES TRANSPORT ET PROTECTION -->
+                <!-- Premiere ligne de 3 images-->
+                <div class="contenairColor contenair">
+                  <div class=" SmallContenairColor">
+                    <img
+                      class="d-block smallPicture  "
+                      src="./AlpineCars_app-images/configurateur/accessoires/transport et protection/alarme.jpg"
+                      alt="third slide"
+                      style="max-width: 100%;"/>
+                    <p style="text-align: center;">ALARM <br />543€</p>
+                  </div>
+                  <div class=" SmallContenairColor">
+                    <img
+                      class="d-block smallPicture"
+                      src="./AlpineCars_app-images/configurateur/accessoires/transport et protection/chaaine-neige.jpg"
+                      alt="third slide"
+                      style="max-width: 100%;"/>
+                    <p style="text-align: center;">CHAINE <br />336€</p>
+                  </div>
+                  <div class=" SmallContenairColor">
+                    <img
+                      class="d-block smallPicture "
+                      src="./AlpineCars_app-images/configurateur/accessoires/transport et protection/extincteur.jpg"
+                      alt="third slide"
+                      style="max-width: 100%;"/>
+                    <p class="text-align: center;">EXTINCTEUR<br />22€</p>
+                  </div>
+                </div>
+                <!-- Deuxieme ligne de 3 images-->
+                <div class="contenairColor contenair">
+                  <div class=" SmallContenairColor">
+                    <img
+                      class="d-block smallPicture  "
+                      src="./AlpineCars_app-images/configurateur/accessoires/transport et protection/fixation-extincteur.jpg"
+                      alt="third slide"
+                      style="max-width: 100%;"/>
+                    <p style="text-align: center;">fIXATION <br />72€</p>
+                  </div>
+                  <div class=" SmallContenairColor">
+                    <img
+                      class="d-block smallPicture"
+                      src="./AlpineCars_app-images/configurateur/accessoires/transport et protection/kit-securite.jpg"
+                      alt="third slide"
+                      style="max-width: 100%;"/>
+                    <p style="text-align: center;">KIT SECURITE <br />20€</p>
+                  </div>
+                  <div class=" SmallContenairColor">
+                    <img
+                      class="d-block smallPicture "
+                      src="./AlpineCars_app-images/configurateur/accessoires/transport et protection/protection-obd.jpg"
+                      alt="third slide"
+                      style="max-width: 100%;"/>
+                    <p class="text-align: center;">OBD<br />99€ </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header contenairButtonAccessory" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed buttonAccessory" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color:white !important; font-weight: bold;">
+                  MULTIMEDIA
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <div class="contenairColor contenair">
+                  <div class=" SmallContenairColor">
+                    <img
+                      class="d-block smallPicture  "
+                      src="./AlpineCars_app-images/configurateur/accessoires/multimedia/support-camera.jpg"
+                      alt="third slide"
+                      style="max-width: 100%;"/>
+                    <p style="text-align: center;">SUPPORT CAMERA<br />89€</p>
+                  </div>
+                  <div class=" SmallContenairColor">
+                    <img
+                      class="d-block smallPicture"
+                      src="./AlpineCars_app-images/configurateur/accessoires/multimedia/support-smartphone.jpg"
+                      alt="third slide"
+                      style="max-width: 100%;"/>
+                    <p style="text-align: center;">SUPPORT SMARTPHONE<br />21€</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header contenairButtonAccessory" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed buttonAccessory" style="color:white !important; font-weight: bold;" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  INTERIEUR
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <div class="contenairColor contenair">
+                  <div class=" SmallContenairColor">
+                    <img
+                      class="d-block smallPicture  "
+                      src="./AlpineCars_app-images/configurateur/accessoires/interieur/filet-rangement.jpg"
+                      alt="third slide"
+                      style="max-width: 100%;"/>
+                    <p style="text-align: center;">FILET<br />59€</p>
+                  </div>
+                  <div class=" SmallContenairColor">
+                    <img
+                      class="d-block smallPicture"
+                      src="./AlpineCars_app-images/configurateur/accessoires/interieur/tapis-coffre.jpg"
+                      alt="third slide"
+                      style="max-width: 100%;"/>
+                    <p style="text-align: center;">TAPIS<br />83€</p>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header contenairButtonAccessory" id="headingFour">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed buttonAccessory" style="color:white !important; font-weight: bold;" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  MATERIEL DE GARAGE
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+              <div class="card-body">
+                <div class="contenairColor contenair">
+                  <div class=" SmallContenairColor">
+                    <img
+                      class="d-block smallPicture  "
+                      src="./AlpineCars_app-images/configurateur/accessoires/garage/chargeur-batterie.jpg"
+                      alt="third slide"
+                      style="max-width: 100%;"/>
+                    <p style="text-align: center;">CHARGEUR BATTERIE<br />240€</p>
+                  </div>
+                  <div class=" SmallContenairColor">
+                    <img
+                      class="d-block smallPicture"
+                      src="./AlpineCars_app-images/configurateur/accessoires/garage/kit-outils.jpg"
+                      alt="third slide"
+                      style="max-width: 100%;"/>
+                    <p style="text-align: center;">KIT OUTILS<br />393€</p>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header contenairButtonAccessory" id="headingFive">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed buttonAccessory" style="color:white !important; font-weight: bold;" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  EXTERIEUR
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+              <div class="card-body">
+                <div class="contenairColor contenair">
+                  <div class=" SmallContenairColor">
+                    <img
+                      class="d-block smallPicture  "
+                      src="./AlpineCars_app-images/configurateur/accessoires/exterieur/antivol-jantes.jpg"
+                      alt="third slide"
+                      style="max-width: 100%;"/>
+                    <p style="text-align: center;">ANTIVOL<br />57€</p>
+                  </div>
+                  <div class=" SmallContenairColor">
+                    <img
+                      class="d-block smallPicture"
+                      src="./AlpineCars_app-images/configurateur/accessoires/exterieur/cabochons-metal.jpg"
+                      alt="third slide"
+                      style="max-width: 100%;"/>
+                    <p style="text-align: center;">CABOCHONS<br />24€</p>
+                  </div>
+                  <div class=" SmallContenairColor">
+                    <img
+                      class="d-block smallPicture"
+                      src="./AlpineCars_app-images/configurateur/accessoires/exterieur/housse.jpg"
+                      alt="third slide"
+                      style="max-width: 100%;"/>
+                    <p style="text-align: center;">HOUSSE<br />216€</p>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FIN de L'arcordeons-->
+        <!-- Bouton avec le prix -->
+        <div class=" contenair contenairShop2" style="margin-top:20px;">
+          <div class="row flex-wrapLG">
+            <button
+              class="BouttonSecondPrix rounded col-12 col-sm-12 col-md-12 col-lg-8 col-xd-8"
+            >
+              REPOSE PIEDS + PACK HERITAGE
+            </button>
+            <button
+              class="buttonShop2 rounded col-6 col-sm-6 col-md-6 col-lg-4 col-xd-4"
+            >
+              54 700 € <i class="fa fa-shopping-cart"></i>
+            </button>
+          </div>
+        </div>
+        
+      </section>
+
+      <hr>
+      <!-- SECTION RECAPITULATIF-->
+      <section id="recapitulatif">
+        <!-- Titre -->
+        <div class="container marginTitle">
+          <div class="row">
+            <div
+              class="col-12 col-sm-12 col-md-12 col-lg-12 col-xd-12 contenairCenter"
+            >
+              <button class="BouttonSecondTitle rounded ">
+                RECAPITULATIF DE VOTRE ACHAT
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small">
+      <!-- Footer Elements -->
+      <div class="container">
+        <!-- Grid row -->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-12 py-5">
+            <div class="mb-5 flex-center">
+              <!-- Facebook -->
+              <a class="fb-ic">
+                <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x">
+                </i>
+              </a>
+              <!-- Twitter -->
+              <a class="tw-ic">
+                <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x">
+                </i>
+              </a>
+              <!-- Google + -->
+              <a class="gplus-ic">
+                <i
+                  class="fa fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x"
+                >
+                </i>
+              </a>
+              <!-- Linkedin -->
+              <a class="li-ic">
+                <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x">
+                </i>
+              </a>
+              <!-- Instagram -->
+              <a class="ins-ic">
+                <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x">
+                </i>
+              </a>
+              <!-- Pinterest -->
+              <a class="pin-ic">
+                <i class="fa fa-pinterest fa-lg white-text fa-2x"> </i>
+              </a>
+            </div>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+      <!-- Footer Elements -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        © 2018 Copyright:
+        <a href="https://mdbootstrap.com/education/bootstrap/"> Alpine</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <!-- Nos Javascript -->
+    <!-- prefix CSS -->
+    <script src="./prefixfree/prefixfree.js"></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Boostrap -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.15/css/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Sticky bar -->
+    <script>
+      $(document).ready(function() {
+        $(window).scroll(function() {
+          if ($(window).scrollTop() > 60) {
+            $("nav").addClass("navbar-Final");
+            $("nav").addClass("position-sticky");
+            $("aside").addClass("filAriaEnd");
+
+            $("nav").removeClass("navbar-Start");
+            $("nav").removeClass("postionAbsolute");
+            $("aside").removeClass("filAriaStart");
+          }
+          if ($(window).scrollTop() < 60) {
+            $("nav").addClass("navbar-Start");
+            $("nav").addClass("postionAbsolute");
+            $("aside").addClass("filAriaStart");
+
+
+            $("nav").removeClass("navbar-Final");
+            $("nav").removeClass("position-sticky");
+            $("aside").removeClass("filAriaEnd");
+
+          } else {
+            $("nav").removeClass("navbar-Start");
+            $("nav").removeClass("postionAbsolute");
+            $("aside").removeClass("filAriaStart");
+          }
+        });
+      });
+    </script>
+   
+   
+    <!-- Vue JS en CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+     <!-- Notre fichier .js -->
+     <script src="./JS/app.js"></script>
+  </body>
+</html>

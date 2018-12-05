@@ -1,0 +1,29 @@
+.valid{
+    border: 5px  rgb(170, 241, 217) solid;
+}
+
+.noValid{
+    border: 5px #3385c6 solid;
+}
+
+.imgvalid {
+    color: #72bb53;
+    position: absolute;
+    z-index: 90;
+    float: right;
+    top: 10%;
+    right: 8%;
+
+}
+
+.validPicture {
+    border: 3px solid #72bb53;
+}
+
+.noValidPicture{
+    border: 0px solid #72bb53;
+}
+
+.colorvalid{
+    color: #72bb53;
+}

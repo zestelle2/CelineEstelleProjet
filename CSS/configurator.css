@@ -1,0 +1,798 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+button{
+    width: 120px;
+    height: 42px;
+    color: white;
+    background-color: #3385c6 ;
+    font-weight: bold;
+    text-transform: uppercase !important;
+    border: 1px solid #cccccc;    
+}
+
+.filAriaEnd {
+    position: fixed;
+    width: 10px;
+    border-radius: 5px 5px 5px 5px;
+    height: 80%;
+    margin-left : 97% !important;
+    border: 2px solid #00a2e5;
+    margin-top: -80px;
+
+    z-index: 9999;
+}
+
+.filAriaStart {
+
+    position: fixed;
+    width: 10px;
+    height: 80%;
+    margin-left : 97% !important;
+    border: 2px solid #00a2e5;
+    margin-top: -10px;
+    z-index: 9999;
+}
+
+
+
+.custom-icon {
+    margin-bottom: 50px;
+    margin-left: -57px;
+    z-index: 7777777777;
+    cursor: pointer;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    font-size: 1rem;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25vw;
+    overflow: hidden;
+    background-size: cover;
+    color: deepskyblue;
+    font-weight: bold;
+    border: 2px solid grey;
+    background-color: #cccccc;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
+    opacity: 0.8;
+    transition: background 0.5s, color 1s, opacity 0.5s, border 0.5s;
+  
+  }
+  .custom-icon:hover {
+    opacity: 1;
+    color: deepskyblue;
+    border-color: deepskyblue;
+  }
+
+
+ .imageRelatif {
+    position:relative;
+    z-index: 9;
+ }
+
+/* 1er section */
+
+.buttonClass{
+    width: 110%;
+    height: 42px;
+    color: white;
+    background-color: #3385c6 ;
+    font-weight: bold;
+    text-transform: uppercase !important;
+    border: 1px solid #cccccc;
+
+}
+
+.buttonShop{
+    color: #3385c6;
+    background-color: white ;
+    font-weight: bold;
+    border: 1px solid #3385c6;
+    box-shadow: 0 0 2px #000000;
+    margin-left: 80%;
+    margin-top: 20px;
+}
+.buttonShop2{
+    color: #3385c6;
+    background-color: white ;
+    font-weight: bold;
+    border: 1px solid #3385c6;
+    box-shadow: 0 0 2px #000000;
+    margin-left: 0%;
+}
+
+.flex-wrapLG{
+    flex-wrap: nowrap !important;
+}
+.BouttonSecondPrixCacher {
+    width: 100%;
+    border: 6Px solid #cccccc;
+    margin-left: 10%;
+    margin-right: 5%;
+    visibility: hidden;
+}
+.contenairShop {
+    padding-right: 18%;
+}
+.contenairShop2{
+    padding-right: 20%;
+}
+
+section{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h4{
+    font-family: roboto;
+    text-transform: uppercase !important;
+}
+
+
+p{
+    font-family: roboto;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.textCenter {
+    text-align: center;
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+    
+}
+.tableCenterDesign{
+    text-align: center !important;
+
+}
+
+hr{
+    border: 0.1px solid #232323 !important;
+    width: 80%;
+
+}
+.bodyPosition {
+    position: relative;
+    padding-top: 8%
+}
+
+/* NAVIGATION */
+.sectionAgilite {
+    margin: 0;
+    padding: 0 !important;
+
+}
+
+nav{
+    z-index: 99999 !important;
+    color:white !important; 
+    padding-bottom: 53px;
+
+}
+
+nav a, nav a.disabled:hover, nav a:disabled:hover {
+    color: white !important;
+}
+
+
+.navbar-Start{
+    background-color: #3385c6;
+    top:10%;
+    display: flex;
+
+    position: absolute !important;
+    z-index: 99999 !important;
+    width: 100%;
+    margin: 0;
+    top: 0%;
+}
+
+.postionAbsolute{
+    position:absolute !important;
+    z-index:99999;
+}
+
+.position-sticky {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+}
+
+.navbar-Final{
+    background-color: #84c1ff !important;
+    top:10%;
+    display: flex;
+
+    position: absolute !important;
+    z-index: 99999;
+    width: 100%;
+    margin: 0;
+    top: 0%;
+}
+
+:first-child {
+    display: inline-block;
+}
+
+img {
+    position: relative;
+    z-index: 3; /* .boite-doree sera au-dessus de .boite-verte et .boite-tirets */
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    z-index: 1;
+}
+
+/* footer */
+footer{
+    background-color: #3385c6 !important;
+    margin-top: 10px;
+
+       
+}
+
+/* SECTION 1 Choix de version */
+@keyframes goProgressHelp {
+    
+    0% {
+
+        margin-right: -30%;
+
+    }
+
+
+    100% {
+
+        margin-right: -4px;
+
+
+    }
+}
+
+@keyframes goProgress {
+
+    0% {
+
+        transform: translateX(-30%);
+        z-index: 1999;
+
+    }
+    100% {
+
+        transform: translateX(0%);
+        z-index: 999;
+
+    }
+
+}
+
+.BigTitleSmarphone {
+    visibility: hidden;
+}
+
+.BigTitle{
+    border: 2px solid #00a2e5;
+    text-align: center;
+    background-color: #b7d5ec;
+    color: #00a2e5;
+    padding-top:10px;
+    width: 80%;
+    height: 50px;
+    width: 100%;
+    margin-right: -4px;
+    border-right: 5px solid #b7d5ec;
+    position: relative;
+    z-index: 999;
+    animation: goProgressHelp 3s linear;
+    
+}
+
+.BigTitleHelp{
+    background-color:  #b7d5ec;
+    height: 50px;
+    width: 80%;
+    border-radius:0% 50% 50% 0%;
+    border: 2px solid #00a2e5;
+    position: absolute;
+    z-index:4;
+    animation: goProgress 4s linear;
+}
+
+.contenairCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    padding: 5px;
+    padding-top: 16px;
+    text-align: center
+}
+
+
+.separateSection{
+    margin-top: 10px;
+}
+
+/* 2eme section : Choix de couleur */
+
+.BouttonSecondTitle{
+    width: 100%;
+    border: 6Px solid #cccccc;
+}
+.BouttonSecondPrix{
+    width: 50%;
+    border: 6Px solid #cccccc;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+.carouselCouleur {
+    height: 400px;
+}
+
+.smallPicture {
+    height: 100px !important;
+}
+
+.SmallContenairColor{
+    text-align: center;
+    padding: 10px;
+}
+
+.contenairColor{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+}
+
+.marginTitle {
+    margin-bottom: 5%;
+}
+
+/* 3eme section : Choix des jantes */
+.BigpictureRims {
+    height: 300px;
+}
+
+.pictureSeat {
+    height: 200px;
+    padding: 10px;
+}
+
+/* 4eme section : Equipement */
+
+.contenairEquipment {
+    padding: 5px;
+    background-color: #3385c6;
+    color: white;    
+    font-weight: bold;     
+}
+
+/* 4EME SECTION : sous cartegory DESIGN */
+.smallPictureCategory{
+    height: 100px;
+    padding: 5px;
+
+}
+
+.containerDesign {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.PictureDesign {
+    width: 90%;
+    height: 80%;
+    padding: 25px;
+}
+
+/* Accesoire */
+.buttonAccessory{
+    width: 110%;
+    height: 42px;
+    margin-top:-10px !important;
+    color:white !important;
+    background-color: #3385c6 ;
+    font-weight: bold;
+    text-transform: uppercase !important;
+    border: 1px solid #cccccc; 
+}
+
+.contenairButtonAccessory{
+    background-color: #3385c6 !important;
+    width : 296px;
+    height: 50px;
+    color: white !important;
+    border-radius: 3px;
+    box-shadow: 0 0 2px #000000;
+}
+
+
+@media only screen and (max-width: 435px) {
+    h4{
+        font-size: 1.2rem !important;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+
+    .BigTitleSmarphone {
+        visibility: visible;
+        border: 2px solid #00a2e5;
+        margin-top: -10px;
+
+        padding-right: 60%;
+        margin-bottom: 20px;
+        text-align: center;
+        background-color: #b7d5ec;
+        color: #00a2e5;
+        width: 120%;
+        height: 50px;
+    }
+
+    .BigTitle{
+       visibility: hidden;
+        
+    }
+    
+    .BigTitleHelp{
+       visibility: hidden;
+    }
+
+
+    .bodyPosition {
+        position: relative;
+        padding-top: 22%
+    }
+
+    /*NAVEBAR */
+    #logoAlpine {
+        width: 140px;
+    }
+
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 410px) {
+
+    .BigTitleSmarphone {
+        visibility: visible;
+        border: 2px solid #00a2e5;
+        margin-top: 30px;
+        padding-top: 10px;
+        padding-right: 60%;
+        margin-bottom: 20px;
+        text-align: center;
+        background-color: #b7d5ec;
+        color: #00a2e5;
+        width: 120%;
+        height: 50px;
+    }
+
+    .buttonHamburger{
+        height: 32px;
+        color: #232323;
+        background-color: #add6ff;
+        font-size: 12px !important;
+        margin: 5px;
+    }
+
+    .textDesign{
+        font-family: roboto;
+        color:#232323;
+        font-size: 15px;
+    }
+
+    h4 {
+        font-size: 1.1rem !important;
+        margin: 6px;
+        font-weight: bold;
+        text-transform: uppercase !important;
+    }
+
+   
+
+    .centrerI{
+        display: flex;
+        justify-content: center;
+    }
+
+    .contenairShop {
+        padding-right: 22% !important;
+    }
+   
+    /* NAVIGATION */
+    nav {
+        height: 50px;
+    }
+
+    #logoAlpine {
+        width: 130px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+   
+
+    .img-fluid-smarphone {
+        max-width: 100%;
+        height: 176px !important;
+    }
+    nav ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+    /* SECTION 1 A110 AGILITE ABSOLUE */
+    
+    .bodyPosition {
+        position: relative;
+        padding-top: 35%
+    }
+
+    .BigTitle{
+       display: none;
+        
+    }
+    
+    .BigTitleHelp{
+        display: none;
+    }
+
+    
+
+   /* SECTION 2 : Couleur */
+    .smallPicture {
+        height: 60px !important;
+    }
+
+    /* section 3 : equipement : design */
+    .smallPictureCategory{
+        height: 60px;
+        padding: 1px;
+    
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+
+
+    .bodyPosition {
+        position: relative;
+        padding-top: 15%
+    }
+
+}
+
+@media only screen and (max-width: 1300px) {
+
+    .bodyPosition {
+        position: relative;
+        padding-top: 13%
+    }
+
+}
+
+@media only screen and (max-width: 360px){
+    .BigTitleSmarphone {
+        visibility: visible;
+        border: 2px solid #00a2e5;
+        margin-top: 30px;
+        padding-top: 10px;
+        padding-right: 60%;
+        margin-bottom: 20px;
+        text-align: center;
+        background-color: #b7d5ec;
+        color: #00a2e5;
+        width: 135%;
+        height: 50px;
+    }
+
+}
+
+
+@media only screen and (min-width: 768px){
+    .conternaireLargeSection1{
+        flex-direction: column;
+        padding-top:10%;
+        padding-right: 0px !important;
+    }
+    
+    .buttonMarginSection1Legend{
+        margin-bottom: 10%;
+    }
+
+    .contenairShop {
+        padding-right: 15%;
+    }
+
+    .BouttonSecondPrix{
+        width: 50%;
+        border: 6Px solid #cccccc;
+        margin-left: 10%;
+        margin-right: 5%;
+    }
+
+    /*3eme section */
+    .marginSeat {
+        margin-bottom: -20px;
+    }
+
+    .paddingSection {
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+    
+}
+
+@media only screen and (max-width: 500px) {
+
+
+.flex-wrapLG{
+    flex-wrap: wrap !important;
+}
+
+.buttonShop2 {
+    margin-left : 65%;
+}
+
+/* 3eme section : Choix des jantes */
+.BigpictureRims {
+    height: 300px;
+}
+
+.pictureSeat {
+    height: 100px;
+    padding: 5px;
+}
+}
+
+@media only screen and (max-width: 575px){
+.pictureSeat{
+    height: 70%;
+    width: 99%;
+    padding: 2px;
+}   
+}
+
+@media only screen and (max-width: 768px) {
+   
+    .buttonClass{
+        width: 110%;
+        height: 42px;
+        color: white;
+        background-color: #3385c6 ;
+        font-weight: bold;
+        text-transform: uppercase !important;
+        border: 1px solid #cccccc; 
+
+    }
+
+    .conternaireLargeSection1{
+        flex-direction: row;
+        padding-top:10%;
+        padding-right: 5% !important;
+    }
+
+    .contenairShop {
+        padding-right: 0%;
+    }
+
+    .paddingSection {
+        padding-right: 0%;
+        padding-left: 0%;
+        margin: 0;
+    }
+
+    /* section EQUIPEMENT Design */
+    .PictureDesign {
+        width: 90%;
+        height: 80%;
+        padding: 0px;
+    }
+
+    .smallPictureCategory{
+        height: 100px;
+        padding: 1px;
+    
+    }
+
+    .ContenaircategoryEquipment {
+        display: contents;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+}
+
+@media only screen and (max-height: 700px) {
+    .filAriaEnd {
+        position: fixed;
+        width: 10px;
+        border-radius: 5px 5px 5px 5px;
+        height: 80%;
+        margin-left : 97% !important;
+        border: 2px solid #00a2e5;
+        margin-top: -150px;
+    
+        z-index: 9999;
+    }
+    
+    .filAriaStart {
+    
+        position: fixed;
+        width: 10px;
+        height: 80%;
+        margin-left : 97% !important;
+        border: 2px solid #00a2e5;
+        margin-top: -90px;
+        z-index: 9999;
+    }
+
+    .custom-icon {
+        margin-bottom: 40px;
+        margin-left: -52px;
+        z-index: 7777777777;
+        cursor: pointer;
+        display: flex;
+        width: 30px;
+        height: 30px;
+        color: #fff;
+        font-size: 1rem;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25vw;
+        overflow: hidden;
+        background-size: cover;
+        color: deepskyblue;
+        font-weight: bold;
+        border: 2px solid grey;
+        background-color: #cccccc;
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
+        opacity: 0.8;
+        transition: background 0.5s, color 1s, opacity 0.5s, border 0.5s;
+      }
+
+      .custom-iconA{
+        padding: 1rem !important;
+
+      }
+
+      .custom-icon1 {
+        line-height: 0px !important;
+        padding: 1rem !important;
+      }
+      .custom-icon:hover {
+        z-index: 99999999999999999999999çç;
+        opacity: 1;
+        color: deepskyblue;
+        border-color: deepskyblue;
+      }
+
+  
+    
+    
+}
+

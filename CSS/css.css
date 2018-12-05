@@ -1,0 +1,518 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+button{
+    width: 120px;
+    height: 42px;
+    color:white;
+    background-color: #3385c6 ;
+    font-weight: bold;
+    text-transform: uppercase !important;
+    border: 1px solid #cccccc;
+    margin: 10px !important;
+    
+}
+
+section{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h4{
+    font-family: roboto;
+    text-transform: uppercase !important;
+}
+
+p{
+    font-family: roboto;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+
+.bold{
+    font-weight: bold;
+}    
+.tableCenterDesign{
+    text-align: center !important;
+
+}
+
+hr{
+    border: 0.2px solid #eaf4ff !important;
+}
+.bodyPosition {
+    position: relative;
+}
+
+/* NAVIGATION */
+.sectionAgilite {
+    margin: 0;
+    padding: 0 !important;
+
+}
+
+nav{
+    z-index: 99999 !important;
+    color:white !important; 
+    padding-bottom: 53px;
+
+}
+
+nav a, nav a.disabled:hover, nav a:disabled:hover {
+    color: white !important;
+}
+
+
+.navbar-Start{
+    background-color: transparent;
+    top:10%;
+    display: flex;
+
+    position: absolute !important;
+    z-index: 99999 !important;
+    width: 100%;
+    margin: 0;
+    top: 0%;
+}
+
+.postionAbsolute{
+    position:absolute !important;
+}
+
+.position-sticky {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+}
+
+.navbar-Final{
+    background-color: #3385c6 !important;
+    top:10%;
+    display: flex;
+
+    position: absolute !important;
+    z-index: 99999;
+    width: 100%;
+    margin: 0;
+    top: 0%;
+}
+
+
+
+
+
+li {
+    display: inline-block;
+}
+
+nav .car {
+    height: 50px;
+    float: right;
+    justify-self: right;
+}
+
+img {
+    position: relative;
+    z-index: 3; /* .boite-doree sera au-dessus de .boite-verte et .boite-tirets */
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    z-index: 1;
+}
+
+/* SECTION 1 AGILITE ABSOLU A110 */
+
+#Presentation110 {
+    margin: 0px;
+}
+
+.description {
+    padding: 5px;
+    padding-top: 16px;
+    text-align: center
+}
+
+.descriptionAgilite {
+    padding: 5px;
+    padding-top: 16px;
+    text-align: center
+}
+
+.separateSection{
+    margin-top: 10px;
+}
+
+.separateSection2{
+    margin-top: 10px;
+    background-color: #3385c6;
+    color: white;  
+}
+
+
+.marginText{
+
+    margin-right: 30px !important;
+    margin-left: 30px;
+
+}
+
+.marginRight {
+    margin-right: 63px !important;
+}
+
+.textAbsolue {
+    color: white;
+    font-family: roboto;
+    position: absolute;
+    z-index: 552; /* .boite-verte sera au-dessus de .boite-tirets */
+    margin-top: -15% !important;
+    width: 95%;
+    text-shadow: 2px 2px #232323;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.textDesign{
+    font-family: roboto;
+    color:#232323;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.textDesign3{
+    color:white;
+}
+
+ /* DEUXIEME SECTION : DESIGn */
+ .relative{
+    position: relative;
+    z-index:20;
+}
+
+.descriptionDesign{
+    font-family: roboto;
+    position: absolute;
+    color:#232323;
+    margin-top: -13%;
+    text-shadow: 3px 3px white;
+    z-index :9999999;
+}
+
+/* TROISIEME SECTION : conseption */
+.conceptionContenair{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+
+.columnDirection{
+
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  align-content: space-between;
+
+}
+
+/* 4EME SECTION: Motorisation  */
+.contenairMotorisation{
+    height: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    padding: 0px;
+}
+#carouselExampleSlidesOnly{
+background-color: #3385c6;
+color:white;
+}
+
+.marginItem {
+    margin: 10px;
+}
+
+.bas_corps{
+    margin-top: 10%;
+}
+
+/*Section 5 : TEchnologie */
+.containerTechnoligie{display: flex;
+align-items: center;
+flex-direction: column;
+}
+
+.brake{
+    margin:15px;
+}
+
+
+/* Section 7 : Caracteristique technique */
+table {
+    border: medium solid #000000;
+    text-align: center;
+}    
+td, th {
+    border: thin solid #6495ed;
+   
+}
+
+/* SECTION 8 : VERSION */
+.Aligner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.Aligner-item {
+    max-width: 50%;
+}
+
+.carouselItem{
+    max-height: 80%;
+}
+
+/* footer */
+footer{
+    background-color: #3385c6 !important;
+    margin-top: 10px;
+}
+
+
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 410px) {
+
+
+    button{
+        width: 75px;
+        height: 32px;
+        color: white;
+        background-color: #3385c6;
+        font-size: 12px !important;
+        margin: 5px;
+    }
+
+    .textDesign{
+        font-family: roboto;
+        color:#232323;
+        font-size: 15px;
+    }
+
+    h4 {
+        font-size: 1.1rem !important;
+        margin: 6px;
+        font-weight: bold;
+        text-transform: uppercase !important;
+    }
+
+    .centrerI{
+        display: flex;
+        justify-content: center;
+    }
+   
+    /* NAVIGATION */
+    nav {
+        height: 50px;
+    }
+
+    #logoAlpine {
+        width: 8px;
+    }
+
+    .car {
+        display: none;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .hamburger {
+        height: 30px;
+    }
+   
+
+    .img-fluid-smarphone {
+        max-width: 100%;
+        height: 176px !important;
+    }
+
+    /* SECTION 1 A110 AGILITE ABSOLUE */
+    .textAbsolue {
+        color: #232323;
+        font-family: roboto;
+        font-size: 12px;
+        z-index: 552; /* .boite-verte sera au-dessus de .boite-tirets */
+        margin: 0px;
+        margin-top: 0%;
+        width: 100%;
+        text-shadow: 0px 0px white;
+    }
+
+.marginText{
+  margin-right: 0px !important;
+    margin-left: 0px;
+}
+
+.marginRight {
+ margin-right: 0 !important;
+}
+
+   /* SECTION 2 : DESIGN */
+   .descriptionDesign{
+    position: absolute;
+    font-size: 12px;
+    color:#232323;
+    margin-top: -30%;
+    text-shadow: 2px 2px white;
+    z-index :9999999;
+    }
+
+    /*marge entre section nuage et article velo  */
+    #bas_corps  
+    {
+        margin-bottom: 38%;
+    }
+
+    .img-fluid-Design {
+        max-width: 100%;
+        height: 230px !important;
+    }
+
+    .bas_corps{
+        margin-top: 0%;
+    }
+
+    .navbar-nav{
+        background-color: black !important;
+        padding: 10px;
+    }
+    
+}
+
+@media (max-width: 1200px) {
+
+    /* SECTION 1 A110 AGILITE ABSOLUE */
+    .textAbsolue {
+        color: #232323;
+        font-family: roboto;
+        font-size: 12px;
+        z-index: 552; /* .boite-verte sera au-dessus de .boite-tirets */
+        margin: 0px;
+        margin-top: 0%;
+        width: 100%;
+        text-shadow: 0px 0px white;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .descriptionAgilite {
+        padding: 5px;
+        padding-top: 70px;
+        text-align: center
+    }
+
+    /* NAVEBAR */
+    #logoAlpine {
+        width: 30px;
+    }
+
+    .car {
+        display: none;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    /* NAVEBAR */
+    #logoAlpine {
+        width: 30px;
+    }
+
+    .car {
+        display: none;
+    }
+
+}
+
+/* Petit appareille */
+@media (max-width: 620px) {
+
+    /*NAVEBAR */
+    #logoAlpine {
+        width: 140px;
+    }
+
+    .car {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 358px) {
+
+    body { 
+       font-size: 0.8em; 
+    }
+
+    h4{
+        font-size: 1rem !important;
+        font-weight: bold;
+        text-transform: uppercase !important;
+    }
+
+
+    /*marge entre section nuage et article velo  */
+    #bas_corps  
+    {
+        margin-bottom: 40% !important;
+    }
+
+    .brake{
+        margin:0px;
+
+    }
+    section{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+
+    .descriptionAgilite {
+        padding: 5px;
+        padding-top: 70px;
+        text-align: center
+    }
+}
+
+@media only screen and (max-width: 320px){
+
+    h4{
+        font-size: 1rem !important;
+        font-weight: bold;
+        text-transform: uppercase !important;
+    }
+
+    .description {
+        padding: 5px;
+        padding-top: 76px;
+        text-align: center
+    }
+}
+
+@media only screen and (max-width: 991) {
+
+    
+}
